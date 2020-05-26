@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   const { id } = req.params;
+  console.log(Schemes.findSteps(id))
 
   Schemes.findById(id)
   .then(scheme => {
